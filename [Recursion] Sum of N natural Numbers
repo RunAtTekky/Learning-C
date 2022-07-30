@@ -1,0 +1,43 @@
+#include <stdio.h>
+
+//Let's create a program which gives sum of two n Natural Numbers using recursion
+int nSum(int n){
+    // First we will declare a variable
+    int sum;
+
+    // Now we will create a loop which uses recursion
+    if (n != 0)
+    // This states if n is NOT 0
+    {
+        // Then the function should return the value n plus nSum(n-1)
+        return n + nSum(n-1);   
+        // But here we have the same function inside a function
+        // So first we will have to go through this function and we will go back to the top again with n-1 as value
+        // Again if n is NOT 0 we will follow the same steps of recalling the function
+
+    }
+    // However if n is EQUAL to 0
+    else{
+        // Then we will return the same value i.e. if n is ZERO then it will return 0
+        return n;
+    }
+    // Now this value is returned to the function as value of nSum(0)
+    // Then this value goes inside the recalling function which in this case will be nSum(1-1) 
+    // It will again get returned and then it will follow along
+    // Finally all the values will be added up again and we will get our desired answer
+
+
+}
+// This is the function which will be read
+int main(){
+    // variable declaration
+    int entNum;
+
+    // Take input from the user
+    printf("Write the number upto which you want to find SUM:\n");
+    scanf("%d", &entNum);
+
+    // Give the desired output
+    printf("The sum of numbers upto %d is %d", entNum, nSum(entNum));
+    return 0;
+}
