@@ -1,0 +1,97 @@
+#include <stdio.h>
+// we are importing certain things necessary to write the code
+
+// This is the part of code which is read first by the machine
+int main(){
+    // giving instuctions to user what to do 
+    printf("Enter values of a, b, c and d:\n");
+
+
+    // initializing variables 
+    int a, b, c, d = 0;
+
+    // taking input from the user using scanf function 
+    scanf("%d", &a);
+    scanf("%d", &b);
+    scanf("%d", &c);
+    scanf("%d", &d);
+
+    // printing the values of input taken from user 
+    printf("\nThese are the values you have inputted:\n");
+    printf("%d", a);
+    printf("\n");
+    // we have these \n coz we need to have some difference in outputs and get them in a new line
+    printf("%d", b);
+    printf("\n");
+    printf("%d", c);
+    printf("\n");
+    printf("%d\n", d);
+    printf("\n");
+    printf("\n");
+    // one extra \n because we want to get our next output with some space 
+
+
+    // first we check if a is greater than b 
+    if (a>b)
+    {   
+        // if it is greater we come here and check if a is also greater than c 
+        if (a>c)
+        {
+            // if it is again greater than c we will check if it is greater than d
+            if (a>d)
+            {
+                // if it is again greater than d Then a will be our largest value
+                printf("%d is the greatest value\n", a);
+            }
+            else
+            {
+                // if d is greater than a then because a is already greater than b and c OUR d will be the greatest value
+                printf("%d is the greatest value\n", d);
+            }
+        }
+        else
+        // now if a is NOT greater than c
+        {
+            // We know that c is greater than a which means c is also greater than b THUS we just need to check whatsup with d
+            if (c>d)
+            {
+                // if c is greater than d then OUR c will be the greatest value
+                printf("%d is the greatest value\n", c);
+            }
+            else{
+                //else if c is NOT greater than d THEN because c is already greater than a and b OUR d will be the greatest value 
+                printf("%d is the greatest value\n", d);
+            }
+        }
+    }
+    // if a is NOT greater than b
+    else{
+        // we will check whatsup with c
+        if (b>c)
+        {
+            // if it is greater than c we will check with d
+           if (b>d)
+           {
+            // if it is greater than d THEN b is our largest value
+            printf("%d is the greatest value\n", b);
+           }
+        // if b is NOT greater than c
+        else{
+            // we will check if c is greater than d
+            if (c>d)
+            {
+                // if c is greater than d THEN our c will be greatest number
+                printf("%d is the greatest value\n", c);
+            }
+            // if c is NOT greater than d THEN d will be the greatest number
+            else
+                printf("%d is the greatest value\n", d);
+        }   
+        }
+        
+    }   
+    // finally we need to return an integer value to the function because
+    // we used int main() which is integer based so it requires return of an integer value
+    return 0;
+}
+// END of the code
