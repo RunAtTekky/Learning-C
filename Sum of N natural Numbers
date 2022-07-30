@@ -1,0 +1,52 @@
+  #include <stdio.h>
+
+
+// this is the function which is read first 
+int main()
+{   
+    // self explanatory 
+    printf("Hellllllo!\nThis program calculates the sum of natural numbers up till the natural number you will input.\n");
+    
+    
+    /* declare and initialize a variable
+    we will give the first number zero value*/ 
+    int givenNum = 0;
+
+    // First off we will have the sum as zero 
+    int sum = 0;
+
+    // The values that we have to add 
+    int i = 1;
+
+    // To give instruction to user
+    printf("Enter a number\n");
+
+    // To take the input from user
+    
+    scanf("%d", &givenNum);
+
+    // to inform the user what is happening 
+    printf("The cumulative sum:\n");
+
+    // making the while loop which will add values one by one to sum and give us a final sum 
+    while (i<=givenNum){
+        // for display purposes we are printing both the values which are being added i.e. The sum and the natural number we are adding into it 
+        printf("%d+%d =", sum, i);
+
+        // we add natural number to the sum one by one 
+        sum = sum + i;
+
+        // we increase the natural number one by one This plus plus means we are increasing it by one 
+        i++;
+        
+        // finally we complete the display purpose by giving the sum of old sum plus natural number 
+        printf("%d\n", sum);
+    } 
+    // when we come outside this loop we will have our final value of sum 
+
+    // printing the final sum for our user 
+    printf("\nThe sum till given number is:\n%d", sum);
+
+    // returning zero because we are using an int main fuction 
+    return 0;
+}
